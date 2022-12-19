@@ -14,25 +14,29 @@
 
     <body>
         <main>
-            <h1>compound Interest Calculator</h1>
+            
 
-            <section>
+            <section class="information">
 
-                <p>"Welcome to our compound interest calculator! This online tool will help you calculate the accumulated interest on an initial capital over a specified period of time (Days, Weeks, Months, Quarters, Semesters, Years).</p>
+                <h1 class="information__title">Compound Interest Calculator</h1>
 
-                <p>To get started, simply enter the amount of your initial capital in the corresponding field. Then, select the period of time, the third step is to enter the interest rate you want to use in the next field. Finally, enter the period of time in which you want to calculate the interest in the last field. Once you have entered this information, simply click on "Calculate" to get the result.</p>
+                <p class="information__paragraph">"Welcome to our compound interest calculator! This online tool will help you calculate the accumulated interest on an initial capital over a specified period of time (Days, Weeks, Months, Quarters, Semesters, Years).</p>
+
+                <p class="information__paragraph">To get started, simply enter the amount of your initial capital in the corresponding field. Then, select the period of time, the third step is to enter the interest rate you want to use in the next field. Finally, enter the period of time in which you want to calculate the interest in the last field. Once you have entered this information, simply click on "Calculate" to get the result.</p>
     
-                <p>The calculator will then use this information to calculate the total amount accumulated at the end of the specified time period, including compound interest. Compound interest is the interest generated on the initial capital and on the accumulated interests in previous periods.</p>
+                <p class="information__paragraph">The calculator will then use this information to calculate the total amount accumulated at the end of the specified time period, including compound interest. Compound interest is the interest generated on the initial capital and on the accumulated interests in previous periods.</p>
     
-                <p>We hope you find this tool useful for calculating the growth of your capital over time. You can also use it to compare different interest rates and periods of time to see how they affect the growth of your capital. Thank you for using our compound interest calculator!"</p>
+                <p class="information__paragraph">We hope you find this tool useful for calculating the growth of your capital over time. You can also use it to compare different interest rates and periods of time to see how they affect the growth of your capital. Thank you for using our compound interest calculator!"</p>
 
             </section>
 
             <article>
 
-                <h1>Calculator</h1>
+                
 
                 <form action="">
+
+                    <h2>Calculator</h2>
 
                     <label for="InitialCapital">Initial Deposit</label>
                     <input type="number" name="initialCapital" id="initialCapital">
@@ -45,10 +49,14 @@
 
                     <label for="timeFrame">Time frame</label>
                     <input type="number" name="timeFrame" id="timeFrame" >
+
+                    <input type="button" value="Calculate" >
                     
                 </form>
 
             </article>
+
+            
 
            
 
