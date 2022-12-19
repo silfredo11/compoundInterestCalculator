@@ -3,3 +3,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --title-color: #FFFFFF;
+    --text-color: #FFFFFF;
+    --input-color: #DFDADA;
+    --black-color: #000000;
+    
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Kanit', sans-serif;
+}
