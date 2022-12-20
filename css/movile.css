@@ -25,10 +25,10 @@ main{
     width: 100%;
     height: auto;
     min-height: 100vh;
-    /* background: linear-gradient(to right, rgba(34, 45, 47, 100%), rgba(56, 121, 155, 100%)); */
     background: linear-gradient(252.81deg, #47A6DC -40.48%, rgba(27, 32, 30, 0.86) 102.84%);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 56px 0 56px;
 }
 
@@ -53,17 +53,21 @@ main{
     margin-bottom: 8px;
 }
 
-article{
+.calculator{
     order: 2;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+article{
     display: flex;
     flex-direction: column;
     width: 304px;
     height: 506px;
     background: radial-gradient(97.61% 55.99% at 50.15% 44.01%, rgba(22, 81, 123, 0.69) 0%, #1E1A36 100%);
     border-radius: 16px;
-    
     padding: 20px;
-    margin-top: 20px;
 }
 
 form{
@@ -88,6 +92,7 @@ label{
     font-size: 1.2rem;
     color: var(--text-color);
     margin: 24px 0 4px 0;
+    cursor: pointer;
 }
 
 .form__input{

@@ -6,7 +6,7 @@
         <meta name="description" content="Esta es una calculadora que le permite calcular el interés compuesto en formato de (día, semana, mes, trimestre, semestre y año). )">
         <meta name="robots" content="index, follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Thecalculator </title>
+        <title>La calcuuladora </title>
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jura:wght@500;700&family=Kanit:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/movile.css">
 
@@ -18,41 +18,43 @@
 
             <section class="information">
 
-                <h1 class="information__title">The calculator</h1>
+                <h1 class="information__title">La calculadora</h1>
 
-                <p class="information__paragraph">Bienvenido a nuestro calculadora de interés compuesto! Esta herramienta en línea le ayudará a calcular el interés acumulado sobre un capital inicial durante un período de tiempo especificado <b>(días, semanas, meses, trimestres, semestres, años)</b> .</p>
-
-                <p class="information__paragraph">Para comenzar, simplemente ingrese el monto de su capital inicial en el campo correspondiente. Luego, seleccione el período de tiempo, el tercer paso es ingresar la tasa de interés que desea usar. Por último, ingrese el período de tiempo en el que desea calcular el interés. Una vez que haya ingresado esta información, simplemente haga clic en <b>"Calcular"</b>  para obtener el resultado.</p>
-    
-                <p class="information__paragraph">La calculadora luego utilizará esta información para calcular el monto total acumulado al final del período de tiempo especificado, incluyendo el interés compuesto. El interés compuesto es el interés generado sobre el capital inicial y sobre los intereses acumulados en períodos anteriores.</p>
+                <p class="information__paragraph">Bienvenido a nuestro calculadora de interés compuesto! Esta herramienta en línea le ayudará a calcular el interés acumulado sobre un capital inicial durante un período de tiempo especificado <u>(días, semanas, meses, trimestres, semestres, años)</u> .</p>
     
                 <p class="information__paragraph">Esperamos que encuentre esta herramienta útil para calcular el crecimiento de su capital a lo largo del tiempo. También puede usarla para comparar diferentes tasas de interés y períodos de tiempo para ver cómo afectan al crecimiento de su capital. ¡Gracias por usar nuestra calculadora de interés compuesto!</p>
 
             </section>
 
-            <article>
+            <section class="calculator">
 
-                <h2 class="form__title">Calculator</h2>
+                <article>
 
-                <form action="/" class="form">
+                    <h2 class="form__title">La Calculadora</h2>
+    
+                    <form action="/" class="form">
+    
+                        <label for="InitialCapital" >Depósito inicial</label>
+                        <input type="number" name="initialCapital" id="InitialCapital" class="form__input" placeholder="1000000">
+    
+                        <label for="reinvesmentPeriod" >Periodo de tiempo</label>
+                        <input type="number" name="reinvesmentPeriod" id="reinvesmentPeriod" class="form__input" placeholder="Years">
+    
+                        <label for="interestRate" >Taza de interés </label>
+                        <input type="number" name="interestRate" id="interestRate" class="form__input" placeholder="5%">
+    
+                        <label for="timeFrame" >Tiempo de la inversión </label>
+                        <input type="number" name="timeFrame" id="timeFrame" class="form__input" placeholder="5">
+    
+                        <input type="button" value="CALCULAR" class="form__bottom" id="button" >
+                        
+                    </form>
+    
+                </article>
 
-                    <label for="InitialCapital">Initial Deposit</label>
-                    <input type="number" name="initialCapital" id="initialCapital" class="form__input" placeholder="1000000">
+            </section>
 
-                    <label for="reinvesmentPeriod">Reinvesment period</label>
-                    <input type="number" name="reinvesmentPeriod" id="reinvesmentPeriod" class="form__input" placeholder="Years">
-
-                    <label for="interestRate">Interest rate</label>
-                    <input type="number" name="interestRate" id="interestRate" class="form__input" placeholder="5%">
-
-                    <label for="timeFrame">Time frame</label>
-                    <input type="number" name="timeFrame" id="timeFrame" class="form__input" placeholder="5">
-
-                    <input type="button" value="CALCULAR" class="form__bottom" id="button" >
-                    
-                </form>
-
-            </article>
+            
 
             
 
