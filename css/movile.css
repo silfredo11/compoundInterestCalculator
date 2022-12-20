@@ -29,7 +29,7 @@ main{
     background: linear-gradient(252.81deg, #47A6DC -40.48%, rgba(27, 32, 30, 0.86) 102.84%);
     display: flex;
     justify-content: space-between;
-    padding: 60px 40px 0 60px;
+    padding: 10px 56px 0 56px;
 }
 
 .information{
@@ -55,19 +55,23 @@ main{
 
 article{
     order: 2;
-    width: 50%;
     display: flex;
-    justify-content: center;
-}
-
-form{
+    flex-direction: column;
     width: 304px;
     height: 506px;
     background: radial-gradient(97.61% 55.99% at 50.15% 44.01%, rgba(22, 81, 123, 0.69) 0%, #1E1A36 100%);
     border-radius: 16px;
+    
+    padding: 20px;
+    margin-top: 20px;
+}
+
+form{
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    
 }
 
 .form__title{
@@ -83,10 +87,31 @@ label{
     font-weight: 500;
     font-size: 1.2rem;
     color: var(--text-color);
+    margin: 24px 0 4px 0;
 }
 
 .form__input{
     height: 40px;
     background-color: var(--input-color);
     border: none;
+    border-radius: 6px;
+    color: var(--black-color);
+    padding: 10px;
+    font-size: 1.6rem;
+    
+}
+
+.form__bottom{
+    width: 131px;
+    height: 40px;
+    color: var(--black-color);
+    font-family: 'Jura', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    justify-self: center;
+    margin-top: 24px;
+    cursor: pointer;
+    margin-left: calc(50% - 60.5px);
 }
