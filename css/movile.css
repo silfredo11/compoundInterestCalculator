@@ -68,6 +68,7 @@ article{
     background: radial-gradient(97.61% 55.99% at 50.15% 44.01%, rgba(22, 81, 123, 0.69) 0%, #1E1A36 100%);
     border-radius: 16px;
     padding: 20px;
+    position: relative;
 }
 
 form{
@@ -97,19 +98,10 @@ label{
     align-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
 .form__span{
-   /* width: 16px;
-   height: 16px;
-    color: var(--black-color);
-    background-color: white;
-    border-radius: 50%;
-    margin-left: 4px;
-    border: 2px solid var(--black-color);
-    text-align: center;
-    font-size: 1.2rem ;
-    padding-bottom: 8px; */
     width: 12px;
     height: 12px;
     background-image: url('https://cdn-icons-png.flaticon.com/512/545/545674.png');
@@ -145,3 +137,62 @@ label{
     cursor: pointer;
     margin-left: calc(50% - 60.5px);
 }
+
+.form__info{
+    width: 240px;
+    height: 24px;
+    font-size: 1.2rem;
+}
+
+.form__info, .form__explanation{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--black-color);
+    background-color: white;
+    border: 1px solid var(--black-color);
+    visibility: hidden;
+}
+
+.form__info1, .form__info2, .form__info3, .form__info4{
+   left: 110px;
+    bottom: 2px;
+}
+
+.form__info2{
+    left: 124px;
+}
+
+.form__info4{
+    left: 154px;
+}
+
+.form__label1:hover > .form__info1, .form__label2:hover > .form__info2, .form__label3:hover > .form__info3, .form__label4:hover > .form__info4{
+    visibility: visible;
+}
+
+.form__explanation{
+    width: 300px;
+    height: 80px;
+    left: -280px;
+    top: 2px;
+    padding: 8px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 8px;
+  
+}
+
+.form__explanation3 {
+    height: 160px;
+    top: -30px;
+}
+
+.form__label1:active > .form__explanation1, .form__label2:active > .form__explanation2, .form__label3:active > .form__explanation3, .form__label4:active > .form__explanation4{
+    visibility: visible;
+}
+
+
