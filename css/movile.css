@@ -92,7 +92,7 @@ main{
     background-color: #ff8303 ;
     border-radius: 4px;
     padding: 4px;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .calculator{
     order: 2;
@@ -164,6 +164,16 @@ label{
     
 }
 
+.form__option{
+    color: var(--black-color);
+    padding: 10px;
+    font-size: 1.6rem;
+}
+
+::placeholder{
+    color: var(--black-color);
+}
+
 .form__bottom{
     width: 131px;
     height: 40px;
@@ -179,8 +189,9 @@ label{
     margin-left: calc(50% - 60.5px);
 }
 
-.form__bottom:hover{
+.form__bottom:active{
    transform: scale(1.1);
+   animation: 200ms bottom ease-out;
 
 }
 

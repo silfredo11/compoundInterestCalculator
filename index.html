@@ -6,7 +6,7 @@
         <meta name="description" content="Esta es una calculadora que le permite calcular el interés compuesto en formato de (día, semana, mes, trimestre, semestre y año). )">
         <meta name="robots" content="index, follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>La calcuuladora </title>
+        <title>La calculadora </title>
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jura:wght@500;700&family=Kanit:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/movile.css">
 
@@ -46,7 +46,16 @@
                         <input type="number" name="initialCapital" id="InitialCapital" class="form__input" placeholder="1000000">
     
                         <label   class="form__label form__label2" >Periodo de tiempo<span class="form__span"> </span> <div class="form__info form__info2">Click sostenido para más información</div> <div class="form__explanation form__explanation2">Aquí debes seleccionar como quieres hacer el cálculo, si es en años, semestres, trimestres, meses, semanas o días.</div></label>
-                        <input type="number" name="reinvesmentPeriod" id="reinvesmentPeriod" class="form__input" placeholder="Years">
+                        
+                        <select name="periOfTime" id="periOfTime" class="form__input">
+                            <option value="" class="form__option">--Por favor elige una opción --</option>
+                            <option value="Y" class="form__option">Años</option>
+                            <option value="S" class="form__option">Semestre</option>
+                            <option value="T" class="form__option">Trimestre</option>
+                            <option value="M" class="form__option">Meses</option>
+                            <option value="W" class="form__option">Semanas</option>
+                            <option value="D" class="form__option">Dias</option>
+                        </select>
     
                         <label " class="form__label form__label3" >Taza de interés <span class="form__span"> </span> <div class="form__info form__info3">Click sostenido para más información</div>  <div class="form__explanation form__explanation3">Aquí debes seleccionar como quieres hacer el cálculo, si es en años, semestres, trimestres, meses, semanas o días.Aquí debes colocar la tasa de interés que va a ganar tu dinero en el periodo de tiempo seleccionado. Ejemplo 10% anual. </div></label>
                         <input type="number" name="interestRate" id="interestRate" class="form__input" placeholder="5%">
@@ -61,12 +70,6 @@
                 </article>
 
             </section>
-
-            
-            
-            
-
-           
 
         </main>
         
