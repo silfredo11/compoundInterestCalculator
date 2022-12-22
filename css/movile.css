@@ -293,7 +293,6 @@ label{
 .animation{
     z-index: 200;
     animation: loader 2s linear forwards; 
-    background-color: #ff8303;
 }
 
 @keyframes loader{
