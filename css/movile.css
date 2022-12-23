@@ -442,3 +442,26 @@ label{
 .tyError{
     border: 2px solid #F21D1D;
 }
+
+.errorTypeMessage{
+    position: absolute;
+    height: 80px;
+    width: 300px;
+    padding: 8px;
+    font-size: 1.6rem;
+    border-radius: 8px;
+    background-color: white;
+    color: var(--black-color);
+    font-weight: 400;
+    top: 10px;
+    left: -60px;
+    font-size: 1.8rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+   
+}
+
+
+
+
+
+

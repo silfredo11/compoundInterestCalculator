@@ -62,8 +62,10 @@
     
                         <label class="form__label form__label1">Depósito inicial <span class="form__span form__span1 ">  </span> <div class="form__info form__info1">Click sostenido para más información</div> <div class="form__explanation form__explanation1">Aquí debes insertar la cantidad de dinero con la que deseas iniciar. </div></label>
                         <input type="number" name="initialCapital" id="InitialCapital" class="form__input" placeholder="1000000">
+                        <div class="errorTypeMessage" id="errorTypeMessage_InitialCapital">Hola mundo </div>
     
                         <label   class="form__label form__label2" >Periodo de tiempo<span class="form__span"> </span> <div class="form__info form__info2">Click sostenido para más información</div> <div class="form__explanation form__explanation2">Aquí debes seleccionar como quieres hacer el cálculo, si es en años, semestres, trimestres, meses, semanas o días.</div></label>
+                        
                         
                         <select name="periOfTime" id="periOfTime" class="form__input">
                             <option value="" class="form__option">--Por favor elige una opción --</option>
@@ -74,12 +76,15 @@
                             <option value="W" class="form__option">Semanas</option>
                             <option value="D" class="form__option">Dias</option>
                         </select>
+                        <div class="errorTypeMessage" id="errorTypeMessage_periOfTime">Hola mundo </div>
     
-                        <label " class="form__label form__label3" >Taza de interés <span class="form__span"> </span> <div class="form__info form__info3">Click sostenido para más información</div>  <div class="form__explanation form__explanation3">Aquí debes seleccionar como quieres hacer el cálculo, si es en años, semestres, trimestres, meses, semanas o días.Aquí debes colocar la tasa de interés que va a ganar tu dinero en el periodo de tiempo seleccionado. Ejemplo 10% anual. </div></label>
+                        <label class="form__label form__label3" >Taza de interés <span class="form__span"> </span> <div class="form__info form__info3">Click sostenido para más información</div>  <div class="form__explanation form__explanation3">Aquí debes seleccionar como quieres hacer el cálculo, si es en años, semestres, trimestres, meses, semanas o días.Aquí debes colocar la tasa de interés que va a ganar tu dinero en el periodo de tiempo seleccionado. Ejemplo 10% anual. </div></label>
                         <input type="number" name="interestRate" id="interestRate" class="form__input" placeholder="5%">
+                        <div class="errorTypeMessage" id="errorTypeMessage_interestRate">Hola mundo </div>
     
                         <label   class="form__label form__label4">Tiempo de la inversión <span class="form__span"> </span> <div class="form__info form__info4">Click sostenido para más información</div>  <div class="form__explanation form__explanation4">Aquí debes indicar el número de veces que iterara el dinero. Ejemplo 6 años, 12 semestres, 24 trimestres, etc.  </div> </label>
                         <input type="number" name="timeFrame" id="timeFrame" class="form__input" placeholder="5">
+                        <div class="errorTypeMessage" id="errorTypeMessage_timeFrame">Hola mundo </div>
     
                         <input type="button" value="CALCULAR" class="form__bottom" id="button" > 
                         
