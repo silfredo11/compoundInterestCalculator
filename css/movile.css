@@ -121,7 +121,7 @@ main{
     position: relative;
 }
 
-form{
+.form{
     width: 100%;
     height: auto;
     display: flex;
