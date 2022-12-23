@@ -437,3 +437,8 @@ label{
     border-left: none;
 }
 
+/* Here start the code for the JavaScript */ 
+
+.tyError{
+    border: 2px solid #F21D1D;
+}
