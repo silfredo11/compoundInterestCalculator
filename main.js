@@ -14,6 +14,13 @@ const inputperiOfTime = document.querySelector('#periOfTime');
 const inputInterestRate = document.querySelector('#interestRate');
 const inputTimeFrame = document.querySelector('#timeFrame');
 
+// Error code
+
+const input1ErrorTypeMessage = document.querySelector('#errorTypeMessage_InitialCapital');
+const input2ErrorTypeMessage = document.querySelector('#errorTypeMessage_periOfTime');
+const input3ErrorTypeMessage = document.querySelector('#errorTypeMessage_interestRate');
+const input4ErrorTypeMessage = document.querySelector('#errorTypeMessage_timeFrame');
+
 btn.addEventListener('click',toggleAnswer);
 x.addEventListener('click', removeVisualize);
 
@@ -29,21 +36,25 @@ function toggleAnswer(){
        if(!investment){
 
             inputID.classList.add('tyError');
+            input1ErrorTypeMessage.classList.add('errorTypeMessage1');
             
        }
        if(!periOfTime){
 
             inputperiOfTime.classList.add('tyError');
+            input2ErrorTypeMessage.classList.add('errorTypeMessage2');
 
        }
        if(!interestRate){
 
             inputInterestRate.classList.add('tyError');
+            input3ErrorTypeMessage.classList.add('errorTypeMessage3');
 
        }
        if(!timeFrame){
 
             inputTimeFrame.classList.add('tyError');
+            input4ErrorTypeMessage.classList.add('errorTypeMessage4');
 
        }
     } else{

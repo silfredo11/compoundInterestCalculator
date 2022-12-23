@@ -444,23 +444,56 @@ label{
 }
 
 .errorTypeMessage{
+    font-family: 'Jura', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-align: center;
     position: absolute;
-    height: 80px;
+    height: auto;
     width: 300px;
     padding: 8px;
-    font-size: 1.6rem;
     border-radius: 8px;
     background-color: white;
     color: var(--black-color);
-    font-weight: 400;
-    top: 10px;
-    left: -60px;
-    font-size: 1.8rem;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-   
+    display: none;
 }
 
+.errorTypeMessage4{
+    top: 335px;
+    left: -310px;
+}
 
+.errorTypeMessage3{
+    top: 235px;
+    left: -310px;
+}
+
+.errorTypeMessage2{
+    top: 135px;
+    left: -310px;
+}
+
+.errorTypeMessage1{
+    top: 85px;
+    left: -310px;
+}
+
+.form__input1:focus ~ .errorTypeMessage1{
+    display: flex;
+}
+
+.form__input2:focus ~ .errorTypeMessage2{
+    display: flex;
+}
+
+.form__input3:focus ~ .errorTypeMessage3{
+    display: flex;
+}
+
+.form__input4:focus ~ .errorTypeMessage4{
+    display: flex;
+}
 
 
 
