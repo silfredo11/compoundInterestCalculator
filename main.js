@@ -66,10 +66,6 @@ function toggleAnswer(){
         main.classList.toggle('display');
      }
 
-   
-
-    
-
 }
 
 function removeVisualize() {
@@ -83,9 +79,42 @@ function removeVisualize() {
 
 
 
-function calculatingCI(){
-   
+function calculatingCI(nuumero){
+     
+     const initialCapital = Number(inputID.value) ;
+     const timeFrame = inputperiOfTime.value;
+     const interestR = Number(inputInterestRate.value);
+     const numberTime = Number(inputTimeFrame.value);
+ 
 
+     switch (timeFrame){
+          case 'Y':
+
+          break;
+
+          case 'S':
+          
+          break;
+
+          case 'T':
+               
+          break;
+
+          case 'M':
+               
+          break;
+
+          case 'W':
+               
+          break;
+
+          case 'D':
+               
+          break;
+
+          default: 
+          
+     }
 
  
 }
