@@ -111,7 +111,7 @@ main{
     justify-content: center;
 }
 
-article{
+.article{
     display: flex;
     flex-direction: column;
     width: 304px;
@@ -391,7 +391,22 @@ label{
     animation-delay: 0.6s;
 }
 
+/* Here start the style for grid */
 
+.grid{
+    display: grid;
+    grid-template-columns: repeat(7, minmax(100px, 1fr));
+    margin-top: 40px;
+    
+}
+
+.grid__son{
+    font-size: 1.6rem;
+    border: 1px solid white;
+    width: 100%;
+    text-align: center;
+    padding: 0 4px;
+}
 
 
 
