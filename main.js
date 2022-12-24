@@ -26,6 +26,7 @@ const tabletInitialAmount = document.querySelector('.table__initialAmount');
 const tabletInterestRate = document.querySelector('.table__interestRate');
 const tabletProfits = document.querySelector('.table__profits');
 const tabletEndingBalance = document.querySelector('.table__endingBalance');
+const tabletSonTitle = document.querySelector('.table__son--title');
 
 btn.addEventListener('click',saveDatas);
 
@@ -33,12 +34,15 @@ let investment;
 let periOfTime;
 let interestRate;
 let numberTime1;
+let time;
 
 function saveDatas(){
      investment =  Number(inputID.value);
      periOfTime =  inputperiOfTime.value;
      interestRate =  Number(inputInterestRate.value);
      numberTime1 =  Number(inputTimeFrame.value);
+
+    
 }
 btn.addEventListener('click',toggleAnswer);
 x.addEventListener('click', removeVisualize);
@@ -119,45 +123,15 @@ function calculatingCI(){
      switch (timeFrame){
           case 'Y':
 
-               endingBalance =  initialCapital * (1 + (interestR / 1))**(1 * numberTime);
+               time = 1;
+               endingBalance =  initialCapital * (1 + (interestR / time))**(time * numberTime);
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
                
                answerP.innerText = `El monto final después de ${numberTime} años con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
 
-               for (let i = 1; i <= numberTime ; i++) {
-
-                    let endingBalanceLoop = initialCapital * (1 + (interestR / 1))**(1 * i);
-                    let profiLoop = endingBalanceLoop.toFixed(2) - investment;
-                    
-                    const tableSonYears = document.createElement('p');
-                    tableSonYears.classList.add('table__son--conten');
-                    tableSonYears.innerText = `${i}`;
-                    tabletYear.appendChild(tableSonYears);
-
-                    const tableSonInitialAmount = document.createElement('p');
-                    tableSonInitialAmount.classList.add('table__son--conten');
-                    tableSonInitialAmount.innerText = initialCapital;
-                    tabletInitialAmount.appendChild(tableSonInitialAmount);
-
-                    const tableSonInterestRate = document.createElement('p');
-                    tableSonInterestRate.classList.add('table__son--conten');
-                    tableSonInterestRate.innerText = `${inputInterestRate.value}%` ;
-                    tabletInterestRate.appendChild(tableSonInterestRate);
-
-                    const tableSonProfits = document.createElement('p');
-                    tableSonProfits.classList.add('table__son--conten');
-                    tableSonProfits.innerText = profiLoop.toFixed(2);
-                    tabletProfits.appendChild(tableSonProfits);
-
-                    const tableSonEndingBalance = document.createElement('p');
-                    tableSonEndingBalance.classList.add('table__son--conten');
-                    tableSonEndingBalance.innerText = endingBalanceLoop.toFixed(2);
-                    tabletEndingBalance.appendChild(tableSonEndingBalance);
-
-                    
-               }
+               tabletSonTitle.innerText = 'Años';
 
                alert('Creo que funcionara');
 
@@ -165,6 +139,7 @@ function calculatingCI(){
 
           case 'S':
 
+               time = 2;
                endingBalance =  initialCapital * (1 + (interestR / 2))**(2 * numberTime);
 
                endingBalance =  initialCapital * (1 + (interestR / 1))**(1 * numberTime);
@@ -173,11 +148,13 @@ function calculatingCI(){
                noDecimalsProfi = profi.toFixed(2);
                
                answerP.innerText = `El monto final después de ${numberTime * 2} semestres con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
-
+               
+               tabletSonTitle.innerText = 'Semestres';
+               alert('¿Funcionara con semestres?');
           break;
                
           case 'T':
-               
+               time = 4;
                endingBalance =  initialCapital * (1 + (interestR / 4))**(4 * numberTime);
 
                endingBalance =  initialCapital * (1 + (interestR / 1))**(1 * numberTime);
@@ -187,10 +164,12 @@ function calculatingCI(){
                
                answerP.innerText = `El monto final después de ${numberTime * 4} trimestres con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
 
+               tabletSonTitle.innerText = 'Trimestres';
+               alert('¿Funcionara con trimestres?');
           break;
 
           case 'M':
-              
+               time = 12;
                endingBalance =  initialCapital * (1 + (interestR / 12))**(12 * numberTime);
 
                endingBalance =  initialCapital * (1 + (interestR / 1))**(1 * numberTime);
@@ -200,10 +179,12 @@ function calculatingCI(){
                
                answerP.innerText = `El monto final después de ${numberTime * 12} meses con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
 
+               tabletSonTitle.innerText = 'Meses';
+               alert('¿Funcionara con meses?');
           break;
 
           case 'W':
-
+               time = 52;
                endingBalance =  initialCapital * (1 + (interestR / 52))**(52 * numberTime);
 
                endingBalance =  initialCapital * (1 + (interestR / 1))**(1 * numberTime);
@@ -213,10 +194,12 @@ function calculatingCI(){
                
                answerP.innerText = `El monto final después de ${numberTime * 52} semanas con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
 
+               tabletSonTitle.innerText = 'Semanas';
+               alert('¿Funcionara con semanas?');
           break;
 
           case 'D':
-
+               time = 365;
                endingBalance =  initialCapital * (1 + (interestR / 65))**(65 * numberTime);
 
                endingBalance =  initialCapital * (1 + (interestR / 1))**(1 * numberTime);
@@ -225,13 +208,47 @@ function calculatingCI(){
                noDecimalsProfi = profi.toFixed(2);
                
                answerP.innerText = `El monto final después de ${numberTime * 365} dias con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
+
+               tabletSonTitle.innerText = 'Dias';
+               alert('¿Funcionara con dias?');
           break;
 
           default: 
           
      }
 
-     
+     for (let i = 1; i <= numberTime ; i++) {
+
+          let endingBalanceLoop = initialCapital * (1 + (interestR / time))**(time * i);
+          let profiLoop = endingBalanceLoop.toFixed(2) - investment;
+          
+          const tableSonYears = document.createElement('p');
+          tableSonYears.classList.add('table__son--conten');
+          tableSonYears.innerText = `${i}`;
+          tabletYear.appendChild(tableSonYears);
+
+          const tableSonInitialAmount = document.createElement('p');
+          tableSonInitialAmount.classList.add('table__son--conten');
+          tableSonInitialAmount.innerText = initialCapital;
+          tabletInitialAmount.appendChild(tableSonInitialAmount);
+
+          const tableSonInterestRate = document.createElement('p');
+          tableSonInterestRate.classList.add('table__son--conten');
+          tableSonInterestRate.innerText = `${inputInterestRate.value}%` ;
+          tabletInterestRate.appendChild(tableSonInterestRate);
+
+          const tableSonProfits = document.createElement('p');
+          tableSonProfits.classList.add('table__son--conten');
+          tableSonProfits.innerText = profiLoop.toFixed(2);
+          tabletProfits.appendChild(tableSonProfits);
+
+          const tableSonEndingBalance = document.createElement('p');
+          tableSonEndingBalance.classList.add('table__son--conten');
+          tableSonEndingBalance.innerText = endingBalanceLoop.toFixed(2);
+          tabletEndingBalance.appendChild(tableSonEndingBalance);
+
+          
+     }
 }
 
 
