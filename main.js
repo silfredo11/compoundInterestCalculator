@@ -24,14 +24,19 @@ const input4ErrorTypeMessage = document.querySelector('#errorTypeMessage_timeFra
 btn.addEventListener('click',toggleAnswer);
 x.addEventListener('click', removeVisualize);
 
+let initialCapital;
+let timeFrame; 
+let interestR;
+let numberTime;
+
 function toggleAnswer(){
 
     const investment =  Number(inputID.value);
     const periOfTime =  inputperiOfTime.value;
     const interestRate =  Number(inputInterestRate.value);
-    const timeFrame =  Number(inputTimeFrame.value);
+    const numberTime1 =  Number(inputTimeFrame.value);
 
-    if(!investment || !periOfTime || !interestRate || !timeFrame){
+    if(!investment || !periOfTime || !interestRate || !numberTime1){
 
        if(!investment){
 
@@ -51,13 +56,19 @@ function toggleAnswer(){
             input3ErrorTypeMessage.classList.add('errorTypeMessage3');
 
        }
-       if(!timeFrame){
+       if(!numberTime1){
 
             inputTimeFrame.classList.add('tyError');
             input4ErrorTypeMessage.classList.add('errorTypeMessage4');
 
        }
     } else{
+
+     initialCapital = Number(inputID.value) ;
+     timeFrame = inputperiOfTime.value;
+     interestR = Number(inputInterestRate.value);
+     numberTime = Number(inputTimeFrame.value);
+
         loader.classList.toggle('animation');
         loaderSon1.classList.toggle('animationSon');
         loaderSon2.classList.toggle('animationSon');
@@ -81,10 +92,10 @@ function removeVisualize() {
 
 function calculatingCI(nuumero){
      
-     const initialCapital = Number(inputID.value) ;
-     const timeFrame = inputperiOfTime.value;
-     const interestR = Number(inputInterestRate.value);
-     const numberTime = Number(inputTimeFrame.value);
+     // const initialCapital = Number(inputID.value) ;
+     // const timeFrame = inputperiOfTime.value;
+     // const interestR = Number(inputInterestRate.value);
+     // const numberTime = Number(inputTimeFrame.value);
  
 
      switch (timeFrame){
@@ -126,6 +137,7 @@ function calculatingCI(nuumero){
      // console.log(Number(inputInterestRate.value));
      // console.log(Number(inputTimeFrame.value));
 }
+
 
 
 
