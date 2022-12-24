@@ -6,29 +6,40 @@ const loaderSon2 = document.querySelector('.loader__son2');
 const loaderSon3 = document.querySelector('.loader__son3');
 const main = document.querySelector('#main');
 const x = document.querySelector('.header__img');
-
 // Here start the form code
-
 const inputID = document.querySelector('#InitialCapital');
 const inputperiOfTime = document.querySelector('#periOfTime');
 const inputInterestRate = document.querySelector('#interestRate');
 const inputTimeFrame = document.querySelector('#timeFrame');
-
 // Here start the form code
-
 // Error code
-
 const input1ErrorTypeMessage = document.querySelector('#errorTypeMessage_InitialCapital');
 const input2ErrorTypeMessage = document.querySelector('#errorTypeMessage_periOfTime');
 const input3ErrorTypeMessage = document.querySelector('#errorTypeMessage_interestRate');
 const input4ErrorTypeMessage = document.querySelector('#errorTypeMessage_timeFrame');
-
 // Error code
-
 // Code to make HTML from JavaScript //
 const answerP = document.querySelector('.result__p');
 // Code to make HTML from JavaScript //
+const tabletYear = document.querySelector('.table__year');
+const tabletInitialAmount = document.querySelector('.table__initialAmount');
+const tabletInterestRate = document.querySelector('.table__interestRate');
+const tabletProfits = document.querySelector('.table__profits');
+const tabletEndingBalance = document.querySelector('.table__endingBalance');
 
+btn.addEventListener('click',saveDatas);
+
+let investment;
+let periOfTime;
+let interestRate;
+let numberTime1;
+
+function saveDatas(){
+     investment =  Number(inputID.value);
+     periOfTime =  inputperiOfTime.value;
+     interestRate =  Number(inputInterestRate.value);
+     numberTime1 =  Number(inputTimeFrame.value);
+}
 btn.addEventListener('click',toggleAnswer);
 x.addEventListener('click', removeVisualize);
 
@@ -37,12 +48,14 @@ let timeFrame;
 let interestR;
 let numberTime;
 
+
+
 function toggleAnswer(){
 
-    const investment =  Number(inputID.value);
-    const periOfTime =  inputperiOfTime.value;
-    const interestRate =  Number(inputInterestRate.value);
-    const numberTime1 =  Number(inputTimeFrame.value);
+     // const investment =  Number(inputID.value);
+     // const periOfTime =  inputperiOfTime.value;
+     // const interestRate =  Number(inputInterestRate.value);
+     // const numberTime1 =  Number(inputTimeFrame.value);
 
     if(!investment || !periOfTime || !interestRate || !numberTime1){
 
@@ -118,7 +131,7 @@ function calculatingCI(){
                
                answerP.innerText = `El monto final después de ${numberTime} años con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
 
-               // El monto final después de 5 años con una tasa de interés del 5% es de 2.000.000, de los cuales, 1.000.000 pertenecen al saldo inicial, 500.000 pertenecen al dinero reinvertido y 500.000 sería la ganancia generada. 
+             
 
           break;
 
