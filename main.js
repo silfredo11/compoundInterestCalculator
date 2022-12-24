@@ -66,15 +66,17 @@ function toggleAnswer(){
 
      initialCapital = Number(inputID.value) ;
      timeFrame = inputperiOfTime.value;
-     interestR = Number(inputInterestRate.value);
+     interestR = Number(inputInterestRate.value) / 100;
      numberTime = Number(inputTimeFrame.value);
 
-        loader.classList.toggle('animation');
-        loaderSon1.classList.toggle('animationSon');
-        loaderSon2.classList.toggle('animationSon');
-        loaderSon3.classList.toggle('animationSon');
-        ans.classList.toggle('visualize');
-        main.classList.toggle('display');
+     loader.classList.toggle('animation');
+     loaderSon1.classList.toggle('animationSon');
+     loaderSon2.classList.toggle('animationSon');
+     loaderSon3.classList.toggle('animationSon');
+     ans.classList.toggle('visualize');
+     main.classList.toggle('display');
+
+          calculatingCI();
      }
 
 }
@@ -90,36 +92,56 @@ function removeVisualize() {
 
 
 
-function calculatingCI(nuumero){
+function calculatingCI(){
      
-     // const initialCapital = Number(inputID.value) ;
-     // const timeFrame = inputperiOfTime.value;
-     // const interestR = Number(inputInterestRate.value);
-     // const numberTime = Number(inputTimeFrame.value);
- 
+
+     let endingBalance;
 
      switch (timeFrame){
           case 'Y':
 
+               endingBalance =  initialCapital * (1 + (interestR / 1))**(1 * numberTime);
+
+               
+
           break;
 
           case 'S':
-          
-          break;
 
+               endingBalance =  initialCapital * (1 + (interestR / 2))**(2 * numberTime);
+
+               
+
+          break;
+               
           case 'T':
                
+               endingBalance =  initialCapital * (1 + (interestR / 4))**(4 * numberTime);
+
+               
+
           break;
 
           case 'M':
+              
+               endingBalance =  initialCapital * (1 + (interestR / 12))**(12 * numberTime);
+
                
+
           break;
 
           case 'W':
+
+               endingBalance =  initialCapital * (1 + (interestR / 52))**(52 * numberTime);
+
                
+
           break;
 
           case 'D':
+
+               endingBalance =  initialCapital * (1 + (interestR / 65))**(65 * numberTime);
+
                
           break;
 
@@ -127,23 +149,8 @@ function calculatingCI(nuumero){
           
      }
 
-     // console.log(initialCapital);
-     // console.log(timeFrame);
-     // console.log(interestR);
-     // console.log(numberTime);
-
-     // console.log(Number(inputID.value));
-     // console.log(inputperiOfTime.value);
-     // console.log(Number(inputInterestRate.value));
-     // console.log(Number(inputTimeFrame.value));
+     
 }
 
 
 
-
-
-
-
-// const nuevoNumero = 4 * inputID.value;
-
-// console.log(`Hola mario este es el numero ${nuevoNumero}`);
