@@ -132,6 +132,17 @@ function calculatingCI(){
                     tableSonYears.classList.add('table__son--conten');
                     tableSonYears.innerText = `${i + 1}`;
                     tabletYear.appendChild(tableSonYears);
+
+                    const tableSonInitialAmount = document.createElement('p');
+                    tableSonInitialAmount.classList.add('table__son--conten');
+                    tableSonInitialAmount.innerText = initialCapital;
+                    tabletInitialAmount.appendChild(tableSonInitialAmount);
+
+                    const tableSonInterestRate = document.createElement('p');
+                    tableSonInterestRate.classList.add('table__son--conten');
+                    tableSonInterestRate.innerText = inputInterestRate.value;
+                    tabletInterestRate.appendChild(tableSonInterestRate);
+
                     
                }
 
