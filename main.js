@@ -116,7 +116,15 @@ function calculatingCI(nuumero){
           
      }
 
- 
+     // console.log(initialCapital);
+     // console.log(timeFrame);
+     // console.log(interestR);
+     // console.log(numberTime);
+
+     // console.log(Number(inputID.value));
+     // console.log(inputperiOfTime.value);
+     // console.log(Number(inputInterestRate.value));
+     // console.log(Number(inputTimeFrame.value));
 }
 
 
