@@ -52,11 +52,6 @@ let numberTime;
 
 function toggleAnswer(){
 
-     // const investment =  Number(inputID.value);
-     // const periOfTime =  inputperiOfTime.value;
-     // const interestRate =  Number(inputInterestRate.value);
-     // const numberTime1 =  Number(inputTimeFrame.value);
-
     if(!investment || !periOfTime || !interestRate || !numberTime1){
 
        if(!investment){
@@ -131,7 +126,16 @@ function calculatingCI(){
                
                answerP.innerText = `El monto final después de ${numberTime} años con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
 
-             
+               for (let i = 0; i < numberTime ; i++) {
+                    
+                    const tableSonYears = document.createElement('p');
+                    tableSonYears.classList.add('table__son--conten');
+                    tableSonYears.innerText = `${i + 1}`;
+                    tabletYear.appendChild(tableSonYears);
+                    
+               }
+
+               alert('Creo que funcionara');
 
           break;
 
