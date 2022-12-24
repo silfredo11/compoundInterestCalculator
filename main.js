@@ -126,11 +126,14 @@ function calculatingCI(){
                
                answerP.innerText = `El monto final después de ${numberTime} años con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
 
-               for (let i = 0; i < numberTime ; i++) {
+               for (let i = 1; i <= numberTime ; i++) {
+
+                    let endingBalanceLoop = initialCapital * (1 + (interestR / 1))**(1 * i);
+                    let profiLoop = endingBalanceLoop.toFixed(2) - investment;
                     
                     const tableSonYears = document.createElement('p');
                     tableSonYears.classList.add('table__son--conten');
-                    tableSonYears.innerText = `${i + 1}`;
+                    tableSonYears.innerText = `${i}`;
                     tabletYear.appendChild(tableSonYears);
 
                     const tableSonInitialAmount = document.createElement('p');
@@ -140,8 +143,18 @@ function calculatingCI(){
 
                     const tableSonInterestRate = document.createElement('p');
                     tableSonInterestRate.classList.add('table__son--conten');
-                    tableSonInterestRate.innerText = inputInterestRate.value;
+                    tableSonInterestRate.innerText = `${inputInterestRate.value}%` ;
                     tabletInterestRate.appendChild(tableSonInterestRate);
+
+                    const tableSonProfits = document.createElement('p');
+                    tableSonProfits.classList.add('table__son--conten');
+                    tableSonProfits.innerText = profiLoop.toFixed(2);
+                    tabletProfits.appendChild(tableSonProfits);
+
+                    const tableSonEndingBalance = document.createElement('p');
+                    tableSonEndingBalance.classList.add('table__son--conten');
+                    tableSonEndingBalance.innerText = endingBalanceLoop.toFixed(2);
+                    tabletEndingBalance.appendChild(tableSonEndingBalance);
 
                     
                }
