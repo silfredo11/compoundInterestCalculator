@@ -119,10 +119,13 @@ function calculatingCI(){
      let noDecimals;
      let profi; 
      let noDecimalsProfi; 
+     let numberTimeLoop;
+     let interestRLoop;
 
      switch (timeFrame){
           case 'Y':
-
+               numberTimeLoop = numberTime;
+               interestRLoop = Number(inputInterestRate.value);
                time = 1;
                endingBalance =  initialCapital * (1 + (interestR / time))**(time * numberTime);
                noDecimals = endingBalance.toFixed(2);
@@ -138,8 +141,10 @@ function calculatingCI(){
           break;
 
           case 'S':
-
+               
                time = 2;
+               numberTimeLoop = numberTime * time;
+               interestRLoop = Number(inputInterestRate.value) / time;
                endingBalance =  initialCapital * (1 + (interestR / 2))**(2 * numberTime);
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
@@ -152,7 +157,10 @@ function calculatingCI(){
           break;
                
           case 'T':
+               
                time = 4;
+               numberTimeLoop = numberTime * time;
+               interestRLoop = Number(inputInterestRate.value) / time;
                endingBalance =  initialCapital * (1 + (interestR / 4))**(4 * numberTime);
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
@@ -166,6 +174,8 @@ function calculatingCI(){
 
           case 'M':
                time = 12;
+               numberTimeLoop = numberTime * time;
+               interestRLoop = Number(inputInterestRate.value) / time;
                endingBalance =  initialCapital * (1 + (interestR / 12))**(12 * numberTime);
 
                noDecimals = endingBalance.toFixed(2);
@@ -180,6 +190,8 @@ function calculatingCI(){
 
           case 'W':
                time = 52;
+               numberTimeLoop = numberTime * time;
+               interestRLoop = Number(inputInterestRate.value) / time;
                endingBalance =  initialCapital * (1 + (interestR / 52))**(52 * numberTime);
 
                noDecimals = endingBalance.toFixed(2);
@@ -194,6 +206,8 @@ function calculatingCI(){
 
           case 'D':
                time = 365;
+               numberTimeLoop = numberTime * time;
+               interestRLoop = Number(inputInterestRate.value) / time;
                endingBalance =  initialCapital * (1 + (interestR / 65))**(65 * numberTime);
 
                noDecimals = endingBalance.toFixed(2);
@@ -210,7 +224,7 @@ function calculatingCI(){
           
      }
 
-     for (let i = 1; i <= numberTime ; i++) {
+     for (let i = 1; i <= numberTimeLoop ; i++) {
 
           let endingBalanceLoop = initialCapital * (1 + (interestR / time))**(time * i);
           let profiLoop = endingBalanceLoop.toFixed(2) - investment;
@@ -227,7 +241,7 @@ function calculatingCI(){
 
           const tableSonInterestRate = document.createElement('p');
           tableSonInterestRate.classList.add('table__son--conten');
-          tableSonInterestRate.innerText = `${inputInterestRate.value}%` ;
+          tableSonInterestRate.innerText = `${interestRLoop.toFixed(2)}%` ;
           tabletInterestRate.appendChild(tableSonInterestRate);
 
           const tableSonProfits = document.createElement('p');
