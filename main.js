@@ -141,8 +141,6 @@ function calculatingCI(){
 
                time = 2;
                endingBalance =  initialCapital * (1 + (interestR / 2))**(2 * numberTime);
-
-               endingBalance =  initialCapital * (1 + (interestR / 1))**(1 * numberTime);
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
@@ -156,8 +154,6 @@ function calculatingCI(){
           case 'T':
                time = 4;
                endingBalance =  initialCapital * (1 + (interestR / 4))**(4 * numberTime);
-
-               endingBalance =  initialCapital * (1 + (interestR / 1))**(1 * numberTime);
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
@@ -172,7 +168,6 @@ function calculatingCI(){
                time = 12;
                endingBalance =  initialCapital * (1 + (interestR / 12))**(12 * numberTime);
 
-               endingBalance =  initialCapital * (1 + (interestR / 1))**(1 * numberTime);
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
@@ -186,8 +181,6 @@ function calculatingCI(){
           case 'W':
                time = 52;
                endingBalance =  initialCapital * (1 + (interestR / 52))**(52 * numberTime);
-
-               endingBalance =  initialCapital * (1 + (interestR / 1))**(1 * numberTime);
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
@@ -202,7 +195,6 @@ function calculatingCI(){
                time = 365;
                endingBalance =  initialCapital * (1 + (interestR / 65))**(65 * numberTime);
 
-               endingBalance =  initialCapital * (1 + (interestR / 1))**(1 * numberTime);
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
