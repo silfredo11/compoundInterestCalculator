@@ -1,4 +1,5 @@
 const btn = document.querySelector('#button');
+const btn2 = document.querySelector('#button2');
 const ans = document.querySelector('.answer');
 const loader = document.querySelector('.loader');
 const loaderSon1 = document.querySelector('.loader__son1');
@@ -44,6 +45,7 @@ function saveDatas(){
 }
 btn.addEventListener('click',toggleAnswer);
 x.addEventListener('click', removeVisualize);
+btn2.addEventListener('click', removeVisualize);
 
 let initialCapital;
 let timeFrame; 
