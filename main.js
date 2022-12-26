@@ -120,6 +120,7 @@ function calculatingCI(){
      let profi; 
      let noDecimalsProfi; 
      let numberTimeLoop;
+     let inputInterestRateLoop;
 
      switch (timeFrame){
           case 'Y':
@@ -130,6 +131,7 @@ function calculatingCI(){
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
+               inputInterestRateLoop = inputInterestRate.value / time;
                
                answerP.innerText = `El monto final después de ${numberTime} años con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
 
@@ -147,6 +149,7 @@ function calculatingCI(){
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
+               inputInterestRateLoop = inputInterestRate.value / time;
                
                answerP.innerText = `El monto final después de ${numberTime * 2} semestres con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
                
@@ -161,6 +164,7 @@ function calculatingCI(){
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
+               inputInterestRateLoop = inputInterestRate.value / time;
                
                answerP.innerText = `El monto final después de ${numberTime * 4} trimestres con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
 
@@ -176,6 +180,7 @@ function calculatingCI(){
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
+               inputInterestRateLoop = inputInterestRate.value / time;
                
                answerP.innerText = `El monto final después de ${numberTime * 12} meses con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
 
@@ -190,6 +195,7 @@ function calculatingCI(){
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
+               inputInterestRateLoop = inputInterestRate.value / time;
                
                answerP.innerText = `El monto final después de ${numberTime * 52} semanas con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
 
@@ -205,6 +211,7 @@ function calculatingCI(){
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
+               inputInterestRateLoop = inputInterestRate.value / time;
                
                answerP.innerText = `El monto final después de ${numberTime * 365} dias con una tasa de interés del ${interestR * 100} % anual es de ${noDecimals}, de los cuales, ${initialCapital} pertenecen al saldo inicial y ${noDecimalsProfi} pertenecen a las ganancias generadas. `;
 
@@ -233,7 +240,7 @@ function calculatingCI(){
 
           const tableSonInterestRate = document.createElement('p');
           tableSonInterestRate.classList.add('table__son--conten');
-          tableSonInterestRate.innerText = `${inputInterestRate.value}%` ;
+          tableSonInterestRate.innerText = `${inputInterestRateLoop.toFixed(2)}%` ;
           tabletInterestRate.appendChild(tableSonInterestRate);
 
           const tableSonProfits = document.createElement('p');
