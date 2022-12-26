@@ -223,10 +223,30 @@ function calculatingCI(){
           
      }
 
+     let capitalfirstLoop = initialCapital;
+     let profiLoop = []
+     let initialCapitalLoop = [initialCapital,];
+
+     for (let i = 1; i <=numberTimeLoop  ; i++) {
+          
+          let profitIntoLoop = capitalfirstLoop * (inputInterestRateLoop / 100);
+          // let profitIntoLoopToFixed = profitIntoLoop.toFixed(2);
+          profiLoop.push(profitIntoLoop);
+
+          let initialCapitalIntoLoop = capitalfirstLoop + profitIntoLoop;
+          // let initialCapitalIntoLoopToFixed = initialCapitalIntoLoop;
+          initialCapitalLoop.push(initialCapitalIntoLoop);
+
+          capitalfirstLoop = capitalfirstLoop + profitIntoLoop;
+     }
+
+     console.log(profiLoop);
+     console.log(initialCapitalLoop);
+
      for (let i = 1; i <= numberTimeLoop ; i++) {
 
           let endingBalanceLoop = initialCapital * (1 + (interestR / time))**(time * i);
-          let profiLoop = endingBalanceLoop.toFixed(2) - investment;
+          let profiLoop1 = endingBalanceLoop.toFixed(2) - investment;
           
           const tableSonYears = document.createElement('p');
           tableSonYears.classList.add('table__son--conten');
@@ -245,7 +265,7 @@ function calculatingCI(){
 
           const tableSonProfits = document.createElement('p');
           tableSonProfits.classList.add('table__son--conten');
-          tableSonProfits.innerText = profiLoop.toFixed(2);
+          tableSonProfits.innerText = profiLoop1.toFixed(2);
           tabletProfits.appendChild(tableSonProfits);
 
           const tableSonEndingBalance = document.createElement('p');
