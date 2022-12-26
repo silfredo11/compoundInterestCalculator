@@ -230,11 +230,9 @@ function calculatingCI(){
      for (let i = 1; i <=numberTimeLoop  ; i++) {
           
           let profitIntoLoop = capitalfirstLoop * (inputInterestRateLoop / 100);
-          // let profitIntoLoopToFixed = profitIntoLoop.toFixed(2);
           profiLoop.push(profitIntoLoop);
 
           let initialCapitalIntoLoop = capitalfirstLoop + profitIntoLoop;
-          // let initialCapitalIntoLoopToFixed = initialCapitalIntoLoop;
           initialCapitalLoop.push(initialCapitalIntoLoop);
 
           capitalfirstLoop = capitalfirstLoop + profitIntoLoop;
@@ -243,19 +241,16 @@ function calculatingCI(){
      console.log(profiLoop);
      console.log(initialCapitalLoop);
 
-     for (let i = 1; i <= numberTimeLoop ; i++) {
+     for (let i = 0; i < numberTimeLoop ; i++) {
 
-          let endingBalanceLoop = initialCapital * (1 + (interestR / time))**(time * i);
-          let profiLoop1 = endingBalanceLoop.toFixed(2) - investment;
-          
           const tableSonYears = document.createElement('p');
           tableSonYears.classList.add('table__son--conten');
-          tableSonYears.innerText = `${i}`;
+          tableSonYears.innerText = `${i + 1}`;
           tabletYear.appendChild(tableSonYears);
 
           const tableSonInitialAmount = document.createElement('p');
           tableSonInitialAmount.classList.add('table__son--conten');
-          tableSonInitialAmount.innerText = initialCapital;
+          tableSonInitialAmount.innerText = initialCapitalLoop[i].toFixed(2);
           tabletInitialAmount.appendChild(tableSonInitialAmount);
 
           const tableSonInterestRate = document.createElement('p');
@@ -265,12 +260,12 @@ function calculatingCI(){
 
           const tableSonProfits = document.createElement('p');
           tableSonProfits.classList.add('table__son--conten');
-          tableSonProfits.innerText = profiLoop1.toFixed(2);
+          tableSonProfits.innerText = profiLoop[i].toFixed(2);
           tabletProfits.appendChild(tableSonProfits);
 
           const tableSonEndingBalance = document.createElement('p');
           tableSonEndingBalance.classList.add('table__son--conten');
-          tableSonEndingBalance.innerText = endingBalanceLoop.toFixed(2);
+          tableSonEndingBalance.innerText = 'En un momento';
           tabletEndingBalance.appendChild(tableSonEndingBalance);
 
           
