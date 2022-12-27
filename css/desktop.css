@@ -128,8 +128,7 @@ main{
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
 
 .form__title{
@@ -176,10 +175,11 @@ label{
     outline: blue;
 }
 
-
 .form__input:focus{
   outline: 3px solid var(--outline-color) ;
+  box-shadow: 4px 4px 4px gray;
 }
+
 .form__option{
     color: var(--black-color);
     padding: 10px;
@@ -206,7 +206,6 @@ label{
 }
 
 .button:focus{
- 
     outline: 3px solid var(--outline-color) ;
 }
 
