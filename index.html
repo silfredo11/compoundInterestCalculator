@@ -82,7 +82,7 @@
                         <input type="number" name="interestRate" id="interestRate" class="form__input form__input3" placeholder="5%">
                         <div class="errorTypeMessage " id="errorTypeMessage_interestRate">Para que la aplicación pueda funcionar, tienes que insertar el porcentaje de interés.</div>
     
-                        <label   class="form__label form__label4">Tiempo de la inversión <span class="form__span"> </span> <div class="form__info form__info4">Click sostenido para más información</div>  <div class="form__explanation form__explanation4">Aquí debes indicar el número de veces que iterara el dinero. Ejemplo 6 años, 12 semestres, 24 trimestres, etc.  </div> </label>
+                        <label   class="form__label form__label4">Tiempo de la inversión en años<span class="form__span"> </span> <div class="form__info form__info4">Click sostenido para más información</div>  <div class="form__explanation form__explanation4">Aquí debes indicar el número de veces que iterara el dinero. Ejemplo 6 años, 12 semestres, 24 trimestres, etc.  </div> </label>
                         <input type="number" name="timeFrame" id="timeFrame" class="form__input form__input4" placeholder="5">
                         <div class="errorTypeMessage " id="errorTypeMessage_timeFrame">Para que la aplicación pueda funcionar, tienes que insertar el tiempo de la inversión.</div>
     
@@ -110,41 +110,48 @@
                     <h2 class="result__title">Resultado de tú cálculo de interés compuesto</h2>
     
                     <p class="result__p"></p>
-    
-                    <article class="table">
-    
-                        <div class="table__year table__son">
 
-                           <h3 class="table__son--title"></h3>
-    
-                        </div>
-    
-                        <div class="table__initialAmount table__son  table__son-borderRigth">
-                            
-                            <h3 class="table__son--title">MI</h3>
-    
-                        </div>
-    
-                        <div class="table__interestRate table__son table__son-borderRigth">
 
-                            <h3 class="table__son--title">TI</h3>
-    
-                        </div>
-    
-                        <div class="table__profits table__son table__son-borderRigth">
+                    <div>
 
-                            <h3 class="table__son--title">Ganancia</h3>
+                        <article class="table">
     
-                        </div>
+                            <div class="table__year table__son">
     
-                        <div class="table__endingBalance table__son table__son-borderRigth">
+                               <h3 class="table__son--title"></h3>
+        
+                            </div>
+        
+                            <div class="table__initialAmount table__son  table__son-borderRigth">
+                                
+                                <h3 class="table__son--title">MI</h3>
+        
+                            </div>
+        
+                            <div class="table__interestRate table__son table__son-borderRigth">
+    
+                                <h3 class="table__son--title">TI</h3>
+        
+                            </div>
+        
+                            <div class="table__profits table__son table__son-borderRigth">
+    
+                                <h3 class="table__son--title">Ganancia</h3>
+        
+                            </div>
+        
+                            <div class="table__endingBalance table__son table__son-borderRigth">
+    
+                                <h3 class="table__son--title">SF</h3>
+    
+                            </div>
+        
+                        </article>
 
-                            <h3 class="table__son--title">SF</h3>
-
-                        </div>
+                    </div>
     
-                    </article>
-                    <button class="button button-left" id="button2">Nuevo cálculo</button>
+                    
+                    <button class="button  button-margin" id="button2">Nuevo cálculo</button>
                 </section>
             </div>
             

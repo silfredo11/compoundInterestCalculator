@@ -9,6 +9,9 @@
     --text-color: #FFFFFF;
     --input-color: #DFDADA;
     --black-color: #000000;
+    --tyError-color: #F21D1D;
+    --outline-color: #FCB74E;
+    --marioWebsite-color: #ff8303;
    
 }
 
@@ -97,7 +100,7 @@ main{
 }
 
 .personalWebsite:hover{
-    background-color: #ff8303 ;
+    background-color: var(--marioWebsite-color) ;
     border-radius: 4px;
     padding: 4px;
     transform: scale(1.1);
@@ -175,7 +178,7 @@ label{
 
 
 .form__input:focus{
-  outline: 3px solid #FCB74E ;
+  outline: 3px solid var(--outline-color) ;
 }
 .form__option{
     color: var(--black-color);
@@ -204,7 +207,7 @@ label{
 
 .button:focus{
  
-    outline: 3px solid #FCB74E ;
+    outline: 3px solid var(--outline-color) ;
 }
 
 .form__bottom:active{
@@ -292,6 +295,7 @@ label{
 }
 
 .container{
+    margin-top: 60px;
     max-width: 800px;
     display: flex;
     justify-content: center;
@@ -412,7 +416,7 @@ label{
 
 .table{
     display: grid;
-    grid-template-columns: repeat(5, minmax(100px, 1fr));
+    grid-template-columns: repeat(5, minmax(100px, auto));
     margin-top: 40px;
 }
 
@@ -437,7 +441,7 @@ label{
     font-size: 1.6rem;
     color: var(--text-color);
     font-weight: 300;
-    padding: 4px 0;
+    padding: 4px ;
     border-bottom: 2px solid  white;
 }
 
@@ -445,14 +449,14 @@ label{
     border-left: none;
 }
 
-.button-left{
+.button-margin{
     margin-left: 0;
-    margin-bottom: 20px;
+    margin: 40px 0;
 }
 /* Here start the code for the JavaScript */ 
 
 .tyError{
-    border: 2px solid #F21D1D;
+    outline: 2px solid var(--tyError-color);
 }
 
 .errorTypeMessage{
