@@ -103,7 +103,8 @@ function removeVisualize() {
 
     ans.classList.remove('visualize');
     main.classList.remove('display');
-
+    location.reload();
+    
 }
 
 // Here start the form code
