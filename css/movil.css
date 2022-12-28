@@ -28,3 +28,18 @@
 .information__socialMedia{
     display: none;
 }
+
+@media screen and (max-width: 320px){
+
+    .information__title{
+        font-size: 3.2rem;
+    }
+    
+    .calculator{
+        margin-top: 20px;
+    }
+    
+    .article{
+        width: 260px;
+    }
+}
