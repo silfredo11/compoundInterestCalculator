@@ -337,12 +337,16 @@ label{
 
 .result__p{
     margin-top: 20px;
-    font-size: 1.8rem;
-    line-height: 2.7rem;
+    font-size: 2rem;
+    line-height: 3rem;
     font-weight: 400;
     width: 100%;
     text-align: center;
 
+}
+
+.result__div{
+    width: 100%;
 }
 /* Here start the style to loader */ 
 
@@ -417,19 +421,18 @@ label{
     display: grid;
     grid-template-columns: repeat(5, minmax(100px, auto));
     margin-top: 40px;
+    width: 100%;
 }
 
 .table__son{
-   
     border: 2px solid white;
     border-bottom: none;
     width: 100%;
-    text-align: center;
-    
+    text-align: center; 
 }
 
 .table__son--title{
-    font-size: 1.8rem;
+    font-size: 2rem;
     border-bottom: 2px solid white;
     padding: 4px 4px;
     color: var(--text-color);
@@ -437,7 +440,7 @@ label{
 }
 
 .table__son--conten{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--text-color);
     font-weight: 300;
     padding: 4px ;
