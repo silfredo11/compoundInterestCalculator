@@ -9,6 +9,8 @@
         
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jura:wght@500;700&family=Kanit:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/desktop.css">
+        <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 920px)" />
+        <link rel="stylesheet" href="./css/movil.css" media="(max-width: 720px)" />
         <title>La calculadora </title>
         <link rel="apple-touch-icon" sizes="57x57" href="https://i.postimg.cc/wjm80Bbm/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="https://i.postimg.cc/tCsL4TbM/apple-icon-60x60.png">
@@ -31,136 +33,145 @@
     </head>
 
     <body>
-        <main id="main">
-            
 
-            <section class="information">
+        <div class="wrappa">
 
-                <h1 class="information__title">La calculadora</h1>
-
-                <p class="information__paragraph">Bienvenido a nuestro calculadora de interés compuesto! Esta herramienta en línea le ayudará a calcular el interés acumulado sobre un capital inicial durante un período de tiempo especificado <u>(días, semanas, meses, trimestres, semestres, años)</u> .</p>
-    
-                <p class="information__paragraph">Esperamos que encuentre esta herramienta útil para calcular el crecimiento de su capital a lo largo del tiempo. También puede usarla para comparar diferentes tasas de interés y períodos de tiempo para ver cómo afectan al crecimiento de su capital. ¡Gracias por usar nuestra calculadora de interés compuesto!</p>
-
-                <div class="information__socialMedia">
-                    <a class="information__socialMedia--linkedink information__socialMedia--icons" target="_blank" href="https://www.linkedin.com/in/silfredo-mario-ibarra-garcia-b1a239213/"></a>
-                    <a class="information__socialMedia--git information__socialMedia--icons" target="_blank" href="https://github.com/silfredo11"></a>
-                    <a class="information__socialMedia--instagram information__socialMedia--icons" target="_blank" href="https://twitter.com/SilfredoIbarra"></a>
-
-                    <a href="https://silfredoibarra.com/" class="personalWebsite" target="_blank"> < Silfredo Ibarra >  </a>
-                </div>
-
-            </section>
-
-            <section class="calculator">
-
-                <article class="article">
-
-                    <h2 class="form__title">La Calculadora</h2>
-    
-                    <div action="/" class="form">
-    
-                        <label class="form__label form__label1">Depósito inicial <span class="form__span form__span1 ">  </span> <div class="form__info form__info1">Click sostenido para más información</div> <div class="form__explanation form__explanation1">Aquí debes insertar la cantidad de dinero con la que deseas iniciar. </div></label>
-                        <input type="number" name="initialCapital" id="InitialCapital" class="form__input form__input1" placeholder="1000000">
-                        <div class="errorTypeMessage " id="errorTypeMessage_InitialCapital">Para que la aplicación pueda funcionar, tienes que indicar el monto de tu "Depósito inicial</div>
-    
-                        <label   class="form__label form__label2" >Periodo de tiempo<span class="form__span"> </span> <div class="form__info form__info2">Click sostenido para más información</div> <div class="form__explanation form__explanation2">Aquí debes seleccionar como quieres hacer el cálculo, si es en años, semestres, trimestres, meses, semanas o días.</div></label>
-                        
-                        
-                        <select name="periOfTime" id="periOfTime" class="form__input form__input2">
-                            <option value="" class="form__option">--Por favor elige una opción --</option>
-                            <option value="Y" class="form__option">Años</option>
-                            <option value="S" class="form__option">Semestre</option>
-                            <option value="T" class="form__option">Trimestre</option>
-                            <option value="M" class="form__option">Meses</option>
-                            <option value="W" class="form__option">Semanas</option>
-                            <option value="D" class="form__option">Dias</option>
-                        </select>
-                        <div class="errorTypeMessage " id="errorTypeMessage_periOfTime">Para que la aplicación pueda funcionar, tienes que elegir un periodo de tiempo: "Años, Meses, Semestres, Trimestres, Meses, Semanas o Días.</div>
-    
-                        <label class="form__label form__label3" >Taza de interés <span class="form__span"> </span> <div class="form__info form__info3">Click sostenido para más información</div>  <div class="form__explanation form__explanation3">Aquí debes seleccionar como quieres hacer el cálculo, si es en años, semestres, trimestres, meses, semanas o días.Aquí debes colocar la tasa de interés que va a ganar tu dinero en el periodo de tiempo seleccionado. Ejemplo 10% anual. </div></label>
-                        <input type="number" name="interestRate" id="interestRate" class="form__input form__input3" placeholder="5%">
-                        <div class="errorTypeMessage " id="errorTypeMessage_interestRate">Para que la aplicación pueda funcionar, tienes que insertar el porcentaje de interés.</div>
-    
-                        <label   class="form__label form__label4">Tiempo de la inversión en años<span class="form__span"> </span> <div class="form__info form__info4">Click sostenido para más información</div>  <div class="form__explanation form__explanation4">Aquí debes indicar el número de veces que iterara el dinero. Ejemplo 6 años, 12 semestres, 24 trimestres, etc.  </div> </label>
-                        <input type="number" name="timeFrame" id="timeFrame" class="form__input form__input4" placeholder="5">
-                        <div class="errorTypeMessage " id="errorTypeMessage_timeFrame">Para que la aplicación pueda funcionar, tienes que insertar el tiempo de la inversión.</div>
-    
-                        <input type="button" value="CALCULAR" class="form__bottom button" id="button" > 
-                        
-                        
-                    </div>
-
-                </article>
-
-            </section>
-
-        </main>
-
-        <div class="answer">
-            <header class="header">
-                <picture class="header__picture">
-                    <img src="https://cdn-icons-png.flaticon.com/512/656/656756.png" alt="" class="header__img">
-                </picture>
-            </header>
-            <div class="container">
-               
+            <main id="main">
                 
-                <section class="result">
-                    <h2 class="result__title">Resultado de tú cálculo de interés compuesto</h2>
-    
-                    <p class="result__p"></p>
+                <div class="main__container">
 
-
-                    <div class="result__div">
-
-                        <article class="table">
+                    <section class="information">
     
-                            <div class="table__year table__son">
-    
-                               <h3 class="table__son--title"></h3>
+                        <h1 class="information__title">La calculadora</h1>
         
-                            </div>
+                        <p class="information__paragraph">Bienvenido a nuestro calculadora de interés compuesto! Esta herramienta en línea le ayudará a calcular el interés acumulado sobre un capital inicial durante un período de tiempo especificado <u>(días, semanas, meses, trimestres, semestres, años)</u> .</p>
+            
+                        <!-- <p class="information__paragraph">Esperamos que encuentre esta herramienta útil para calcular el crecimiento de su capital a lo largo del tiempo. También puede usarla para comparar diferentes tasas de interés y períodos de tiempo para ver cómo afectan al crecimiento de su capital. ¡Gracias por usar nuestra calculadora de interés compuesto!</p> -->
         
-                            <div class="table__initialAmount table__son  table__son-borderRigth">
+                        <footer class="information__socialMedia">
+                            <a class="information__socialMedia--linkedink information__socialMedia--icons" target="_blank" href="https://www.linkedin.com/in/silfredo-mario-ibarra-garcia-b1a239213/"></a>
+                            <a class="information__socialMedia--git information__socialMedia--icons" target="_blank" href="https://github.com/silfredo11"></a>
+                            <a class="information__socialMedia--instagram information__socialMedia--icons" target="_blank" href="https://twitter.com/SilfredoIbarra"></a>
+        
+                            <a href="https://silfredoibarra.com/" class="personalWebsite" target="_blank"> < Silfredo Ibarra >  </a>
+                        </footer>
+        
+                    </section>
+        
+                    <section class="calculator">
+        
+                        <article class="article">
+        
+                            <h2 class="form__title">La Calculadora</h2>
+            
+                            <div action="/" class="form">
+            
+                                <label class="form__label form__label1">Depósito inicial <span class="form__span form__span1 ">  </span> <div class="form__info form__info1">Click sostenido para más información</div> <div class="form__explanation form__explanation1">Aquí debes insertar la cantidad de dinero con la que deseas iniciar. </div></label>
+                                <input type="number" name="initialCapital" id="InitialCapital" class="form__input form__input1" placeholder="1000000">
+                                <div class="errorTypeMessage " id="errorTypeMessage_InitialCapital">Para que la aplicación pueda funcionar, tienes que indicar el monto de tu "Depósito inicial</div>
+            
+                                <label   class="form__label form__label2" >Periodo de tiempo<span class="form__span"> </span> <div class="form__info form__info2">Click sostenido para más información</div> <div class="form__explanation form__explanation2">Aquí debes seleccionar como quieres hacer el cálculo, si es en años, semestres, trimestres, meses, semanas o días.</div></label>
                                 
-                                <h3 class="table__son--title">MI</h3>
-        
-                            </div>
-        
-                            <div class="table__interestRate table__son table__son-borderRigth">
-    
-                                <h3 class="table__son--title">TI</h3>
-        
-                            </div>
-        
-                            <div class="table__profits table__son table__son-borderRigth">
-    
-                                <h3 class="table__son--title">Ganancia</h3>
-        
-                            </div>
-        
-                            <div class="table__endingBalance table__son table__son-borderRigth">
-    
-                                <h3 class="table__son--title">SF</h3>
-    
+                                
+                                <select name="periOfTime" id="periOfTime" class="form__input form__input2">
+                                    <option value="" class="form__option">--Por favor elige una opción --</option>
+                                    <option value="Y" class="form__option">Años</option>
+                                    <option value="S" class="form__option">Semestre</option>
+                                    <option value="T" class="form__option">Trimestre</option>
+                                    <option value="M" class="form__option">Meses</option>
+                                    <option value="W" class="form__option">Semanas</option>
+                                    <option value="D" class="form__option">Dias</option>
+                                </select>
+                                <div class="errorTypeMessage " id="errorTypeMessage_periOfTime">Para que la aplicación pueda funcionar, tienes que elegir un periodo de tiempo: "Años, Meses, Semestres, Trimestres, Meses, Semanas o Días.</div>
+            
+                                <label class="form__label form__label3" >Taza de interés <span class="form__span"> </span> <div class="form__info form__info3">Click sostenido para más información</div>  <div class="form__explanation form__explanation3">Aquí debes seleccionar como quieres hacer el cálculo, si es en años, semestres, trimestres, meses, semanas o días.Aquí debes colocar la tasa de interés que va a ganar tu dinero en el periodo de tiempo seleccionado. Ejemplo 10% anual. </div></label>
+                                <input type="number" name="interestRate" id="interestRate" class="form__input form__input3" placeholder="5%">
+                                <div class="errorTypeMessage " id="errorTypeMessage_interestRate">Para que la aplicación pueda funcionar, tienes que insertar el porcentaje de interés.</div>
+            
+                                <label   class="form__label form__label4">Tiempo de la inversión en años<span class="form__span"> </span> <div class="form__info form__info4">Click sostenido para más información</div>  <div class="form__explanation form__explanation4">Aquí debes indicar el número de veces que iterara el dinero. Ejemplo 6 años, 12 semestres, 24 trimestres, etc.  </div> </label>
+                                <input type="number" name="timeFrame" id="timeFrame" class="form__input form__input4" placeholder="5">
+                                <div class="errorTypeMessage " id="errorTypeMessage_timeFrame">Para que la aplicación pueda funcionar, tienes que insertar el tiempo de la inversión.</div>
+            
+                                <input type="button" value="CALCULAR" class="form__bottom button" id="button" > 
+                                
+                                
                             </div>
         
                         </article>
+        
+                    </section>
+                </div>
 
-                    </div>
+             
     
+            </main>
+    
+            <div class="answer">
+                <header class="header">
+                    <picture class="header__picture">
+                        <img src="https://cdn-icons-png.flaticon.com/512/656/656756.png" alt="" class="header__img">
+                    </picture>
+                </header>
+                <div class="container">
+                   
                     
-                    <button class="button  button-margin" id="button2">Nuevo cálculo</button>
-                </section>
-            </div>
+                    <section class="result">
+                        <h2 class="result__title">Resultado de tú cálculo de interés compuesto</h2>
+        
+                        <p class="result__p"></p>
+    
+    
+                        <div class="result__div">
+    
+                            <article class="table">
+        
+                                <div class="table__year table__son">
+        
+                                   <h3 class="table__son--title"></h3>
             
+                                </div>
+            
+                                <div class="table__initialAmount table__son  table__son-borderRigth">
+                                    
+                                    <h3 class="table__son--title">MI</h3>
+            
+                                </div>
+            
+                                <div class="table__interestRate table__son table__son-borderRigth">
+        
+                                    <h3 class="table__son--title">TI</h3>
+            
+                                </div>
+            
+                                <div class="table__profits table__son table__son-borderRigth">
+        
+                                    <h3 class="table__son--title">Ganancia</h3>
+            
+                                </div>
+            
+                                <div class="table__endingBalance table__son table__son-borderRigth">
+        
+                                    <h3 class="table__son--title">SF</h3>
+        
+                                </div>
+            
+                            </article>
+    
+                        </div>
+        
+                        
+                        <button class="button  button-margin" id="button2">Nuevo cálculo</button>
+                    </section>
+                </div>
+                
+            </div>
+            <div class="loader">
+                <div  class=" loader__son loader__son1"></div>
+                <div class="loader__son loader__son2"></div>
+                <div class="loader__son loader__son3"></div>
+            </div>
         </div>
-        <div class="loader">
-            <div  class=" loader__son loader__son1"></div>
-            <div class="loader__son loader__son2"></div>
-            <div class="loader__son loader__son3"></div>
-        </div>
+      
         
         <script src="./main.js"></script>
     </body>

@@ -18,25 +18,33 @@
 html{
     font-size: 62.5%;
     color: var(--text-color);
+    font-family: 'Kanit', sans-serif;
 }
 
-body{
-    font-family: 'Kanit', sans-serif;
+.wrappa{
+    width: 100%;
     position: relative;
+   
 }
 
 main{
     width: 100%;
-    height: auto;
     min-height: 100vh;
     background: linear-gradient(252.81deg, #47A6DC -40.48%, rgba(27, 32, 30, 0.86) 102.84%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 56px 0 56px;
     position: absolute;
     top: 0;
     z-index: 100;
+    display: flex;
+    justify-content: center;
+}
+
+.main__container{
+    width: 80%;
+    max-width: 900px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .display{
@@ -45,7 +53,7 @@ main{
 
 .information{
     order: 1;
-    width: 50%;
+    width: 60%;
     height: auto;
 }
 
@@ -108,9 +116,9 @@ main{
 
 .calculator{
     order: 2;
-    width: 50%;
+    width: 40%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
 }
 
 .article{
@@ -514,5 +522,6 @@ label{
 }
 
 
+@media screen and (max-width: 900 ){
 
-
+}
