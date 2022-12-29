@@ -42,5 +42,65 @@
     .article{
         width: 260px;
     }
+
+    .form__explanation{
+        width: 260px;
+    }
+
+    .form__explanation3 {
+      height: auto;
+    }
+
+    .form__explanation2 {
+        height: auto;
+    }
+    
 }
 
+.form__info1, .form__info2, .form__info3, .form__info4{
+    left: 10px;
+    bottom: 12px;
+ }
+ 
+ .form__info2{
+     left: 10px;
+ }
+ 
+ .form__info4{
+    left: 10px;
+    top: -30px;
+}
+
+ .form__explanation{
+    left: -20px;
+    top: 80px;
+}
+
+.form__explanation3 {
+    height: 160px;
+    top: -160px;
+}
+
+.form__explanation4 {
+    top: -100px;
+}
+
+.errorTypeMessage4{
+    top: 250px;
+    left: 0px;
+}
+
+.errorTypeMessage3{
+    top: 135px;
+    left: 0px;
+}
+
+.errorTypeMessage2{
+    top: 55px;
+    left: 0px;
+}
+
+.errorTypeMessage1{
+    top: 5px;
+    left: 0px;
+}
