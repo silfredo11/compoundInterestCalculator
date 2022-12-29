@@ -303,6 +303,7 @@ label{
 }
 
 .container{
+    width: 90%;
     margin-top: 60px;
     max-width: 800px;
     display: flex;
@@ -351,11 +352,11 @@ label{
     font-weight: 400;
     width: 100%;
     text-align: center;
-
 }
 
 .result__div{
     width: 100%;
+    overflow: auto;
 }
 /* Here start the style to loader */ 
 
@@ -368,6 +369,7 @@ label{
     width: 100%;
     background-color: white;
     z-index: 95;
+  
 }
 
 .animation{
@@ -430,7 +432,7 @@ label{
     display: grid;
     grid-template-columns: repeat(5, minmax(100px, auto));
     margin-top: 40px;
-    width: 100%;
+    width: 800px;
 }
 
 .table__son{
