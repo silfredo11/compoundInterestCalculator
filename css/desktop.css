@@ -256,7 +256,8 @@ label{
 }
 
 .form__info4{
-    left: 154px;
+    left: 124px;
+    top: -30px;
 }
 
 .form__label1:hover > .form__info1, .form__label2:hover > .form__info2, .form__label3:hover > .form__info3, .form__label4:hover > .form__info4{
