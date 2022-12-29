@@ -2,7 +2,7 @@
 
 Bienvenido a nuestro calculadora de interés compuesto! Esta herramienta en línea le ayudará a calcular el interés acumulado sobre un capital inicial durante un período de tiempo especificado (días, semanas, meses, trimestres, semestres, años).
 
-![Calculadora de interés compuesto](https://calculadora-de-interest-compuesto.vercel.app/)
+![calculadora de interés compuesto](hhttps://calculadora-de-interest-compuesto.vercel.app/)
 
 
 **Para crear este sitio web use las siguientes tecnologias:**
