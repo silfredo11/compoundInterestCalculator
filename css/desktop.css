@@ -21,6 +21,7 @@ body{
 
 html{
     font-size: 62.5%;
+    color: #FFFFFF;
     color: var(--text-color);
     font-family: 'Kanit', sans-serif;
 }
@@ -66,6 +67,7 @@ main{
     font-size: 4rem;
     margin-bottom: 10px;
     font-weight: 700;
+    color: #FFFFFF;
     color: var(--title-color);
 }
 
@@ -73,6 +75,7 @@ main{
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 2.7rem;
+    color: #FFFFFF;
     color: var(--text-color);
     margin-bottom: 8px;
 }
@@ -113,6 +116,7 @@ main{
 }
 
 .personalWebsite:hover{
+    background-color: #ff8303;
     background-color: var(--marioWebsite-color) ;
     border-radius: 4px;
     padding: 4px;
@@ -147,6 +151,7 @@ main{
 .form__title{
     font-weight: 700;
     font-size: 2.8rem;
+    color: #FFFFFF;
     color: var(--title-color);
     width: 100%;
     text-align: center;
@@ -156,6 +161,7 @@ label{
     font-family: 'Jura', sans-serif;
     font-weight: 500;
     font-size: 1.2rem;
+    color: #FFFFFF;
     color: var(--text-color);
     margin: 24px 0 4px 0;
     cursor: pointer;
@@ -179,6 +185,7 @@ label{
 
 .form__input{
     height: 40px;
+    background-color: #DFDADA;
     background-color: var(--input-color);
     border: none;
     border-radius: 6px;
@@ -189,23 +196,22 @@ label{
 }
 
 .form__input:focus{
+    outline: #FCB74E;
   outline: 3px solid var(--outline-color) ;
   box-shadow: 4px 4px 4px gray;
 }
 
 .form__option{
+    color: #000000;
     color: var(--black-color);
     padding: 10px;
     font-size: 1.6rem;
 }
 
-::placeholder{
-    color: var(--black-color);
-}
-
 .button{
     width: 131px;
     height: 40px;
+    color: #000000;
     color: var(--black-color);
     font-family: 'Jura', sans-serif;
     font-size: 1.6rem;
@@ -219,6 +225,7 @@ label{
 }
 
 .button:focus{
+    outline: #FCB74E;
     outline: 3px solid var(--outline-color) ;
 }
 
@@ -240,8 +247,11 @@ label{
     text-align: center;
     align-items: center;
     justify-content: center;
+    color: #000000;
     color: var(--black-color);
+    background-color: #FFFFFF;
     background-color: white;
+    border: #000000;
     border: 1px solid var(--black-color);
     visibility: hidden;
 }
@@ -371,6 +381,7 @@ label{
     align-items: center;
     height: 100vh;
     width: 100%;
+    background-color: #FFFFFF;
     background-color: white;
     z-index: 95;
   
@@ -450,6 +461,7 @@ label{
     font-size: 2rem;
     border-bottom: 2px solid white;
     padding: 4px 4px;
+    color: #FFFFFF;
     color: var(--text-color);
     font-weight: 500;
 }
@@ -459,6 +471,7 @@ label{
     color: var(--text-color);
     font-weight: 300;
     padding: 4px ;
+    border-bottom: #FFFFFF;
     border-bottom: 2px solid  white;
 }
 
@@ -473,6 +486,7 @@ label{
 /* Here start the code for the JavaScript */ 
 
 .tyError{
+    outline: #F21D1D;
     outline: 2px solid var(--tyError-color);
 }
 
@@ -486,7 +500,9 @@ label{
     width: 300px;
     padding: 8px;
     border-radius: 8px;
+    background-color: #FFFFFF;
     background-color: white;
+    color: #000000;
     color: var(--black-color);
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     display: none;
