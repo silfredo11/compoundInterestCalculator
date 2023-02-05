@@ -141,13 +141,13 @@ function calculatingCI(){
 
                time = 2;
                numberTimeLoop = numberTime * time;
-               endingBalance =  investment * (1 + (interestR / 2))**(2 * numberTime);
+               endingBalance =  investment * (1 + (interestR / time))**(time* numberTime);
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - investment;
                noDecimalsProfi = profi.toFixed(2);
                inputInterestRateLoop = interestRateInput.value / time;
                
-               answerParagraph.innerText = `El monto final después de ${numberTime * 2} semestres con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(investment) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
+               answerParagraph.innerText = `El monto final después de ${numberTime * time} semestres con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(investment) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
                
                tabletSonTitle.innerText = 'Semestres';
           break;
@@ -155,13 +155,13 @@ function calculatingCI(){
           case 'T':
                time = 4;
                numberTimeLoop = numberTime * time;
-               endingBalance =  investment * (1 + (interestR / 4))**(4 * numberTime);
+               endingBalance =  investment * (1 + (interestR / time))**(time * numberTime);
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - investment;
                noDecimalsProfi = profi.toFixed(2);
                inputInterestRateLoop = interestRateInput.value / time;
                
-               answerParagraph.innerText = `El monto final después de ${numberTime * 4} trimestres con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(investment) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
+               answerParagraph.innerText = `El monto final después de ${numberTime * time} trimestres con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(investment) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
 
                tabletSonTitle.innerText = 'Trimestres';
           break;
@@ -169,14 +169,14 @@ function calculatingCI(){
           case 'M':
                time = 12;
                numberTimeLoop = numberTime * time;
-               endingBalance =  investment * (1 + (interestR / 12))**(12 * numberTime);
+               endingBalance =  investment * (1 + (interestR / time))**(time * numberTime);
 
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - investment;
                noDecimalsProfi = profi.toFixed(2);
                inputInterestRateLoop = interestRateInput.value / time;
                
-               answerParagraph.innerText = `El monto final después de ${numberTime * 12} meses con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(investment) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
+               answerParagraph.innerText = `El monto final después de ${numberTime * time} meses con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(investment) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
 
                tabletSonTitle.innerText = 'Meses';
           break;
@@ -184,13 +184,13 @@ function calculatingCI(){
           case 'W':
                time = 52;
                numberTimeLoop = numberTime * time;
-               endingBalance =  investment * (1 + (interestR / 52))**(52 * numberTime);
+               endingBalance =  investment * (1 + (interestR / time))**(time * numberTime);
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - investment;
                noDecimalsProfi = profi.toFixed(2);
                inputInterestRateLoop = interestRateInput.value / time;
                
-               answerParagraph.innerText = `El monto final después de ${numberTime * 52} semanas con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(investment) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
+               answerParagraph.innerText = `El monto final después de ${numberTime * time} semanas con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(investment) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
 
                tabletSonTitle.innerText = 'Semanas';
           break;
@@ -198,14 +198,14 @@ function calculatingCI(){
           case 'D':
                time = 365;
                numberTimeLoop = numberTime * time;
-               endingBalance =  investment * (1 + (interestR / 65))**(65 * numberTime);
+               endingBalance =  investment * (1 + (interestR / time))**(time * numberTime);
 
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - investment;
                noDecimalsProfi = profi.toFixed(2);
                inputInterestRateLoop = interestRateInput.value / time;
                
-               answerParagraph.innerText = `El monto final después de ${numberTime * 365} dias con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(investment) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
+               answerParagraph.innerText = `El monto final después de ${numberTime * time} dias con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(investment) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
 
                tabletSonTitle.innerText = 'Dias';
           break;
