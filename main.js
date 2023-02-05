@@ -1,26 +1,26 @@
-const btn = document.querySelector('#button');
-const btn2 = document.querySelector('#button2');
-const ans = document.querySelector('.answer');
+const submitBtn = document.querySelector('#button');
+const anotherBtn = document.querySelector('#button2');
+const resultSection = document.querySelector('.answer');
 const loader = document.querySelector('.loader');
 const loaderSon1 = document.querySelector('.loader__son1');
 const loaderSon2 = document.querySelector('.loader__son2');
 const loaderSon3 = document.querySelector('.loader__son3');
-const main = document.querySelector('#main');
-const x = document.querySelector('.header__img');
+const mainContent = document.querySelector('#main');
+const headerIcont = document.querySelector('.header__img');
 // Here start the form code
-const inputID = document.querySelector('#InitialCapital');
-const inputperiOfTime = document.querySelector('#periOfTime');
-const inputInterestRate = document.querySelector('#interestRate');
-const inputTimeFrame = document.querySelector('#timeFrame');
+const initialCapitalInput = document.querySelector('#InitialCapital');
+const periodOfTimeInput = document.querySelector('#periOfTime');
+const interestRateInput = document.querySelector('#interestRate');
+const timeFrameInput = document.querySelector('#timeFrame');
 // Here start the form code
 // Error code
-const input1ErrorTypeMessage = document.querySelector('#errorTypeMessage_InitialCapital');
-const input2ErrorTypeMessage = document.querySelector('#errorTypeMessage_periOfTime');
-const input3ErrorTypeMessage = document.querySelector('#errorTypeMessage_interestRate');
-const input4ErrorTypeMessage = document.querySelector('#errorTypeMessage_timeFrame');
+const errorMsgInitialCapital = document.querySelector('#errorTypeMessage_InitialCapital');
+const errorMsgPeriodOfTime = document.querySelector('#errorTypeMessage_periOfTime');
+const errorMsgInterestRate = document.querySelector('#errorTypeMessage_interestRate');
+const errorMsgTimeFrame = document.querySelector('#errorTypeMessage_timeFrame');
 // Error code
 // Code to make HTML from JavaScript //
-const answerP = document.querySelector('.result__p');
+const answerParagraph = document.querySelector('.result__p');
 // Code to make HTML from JavaScript //
 const tabletYear = document.querySelector('.table__year');
 const tabletInitialAmount = document.querySelector('.table__initialAmount');
@@ -29,80 +29,79 @@ const tabletProfits = document.querySelector('.table__profits');
 const tabletEndingBalance = document.querySelector('.table__endingBalance');
 const tabletSonTitle = document.querySelector('.table__son--title');
 
-btn.addEventListener('click',saveDatas);
-
 let investment;
 let periOfTime;
 let interestRate;
 let numberTime1;
 let time;
 
-function saveDatas(){
-     investment =  Number(inputID.value);
-     periOfTime =  inputperiOfTime.value;
-     interestRate =  Number(inputInterestRate.value);
-     numberTime1 =  Number(inputTimeFrame.value);
-}
-btn.addEventListener('click',toggleAnswer);
-x.addEventListener('click', removeVisualize);
-btn2.addEventListener('click', removeVisualize);
+submitBtn.addEventListener('click',() => {
+     investment =  Number(initialCapitalInput.value);
+     investment =  Number(initialCapitalInput.value);
+     periOfTime =  periodOfTimeInput.value;
+     interestRate =  Number(interestRateInput.value);
+     numberTime1 =  Number(timeFrameInput.value);
+});
 
 let initialCapital;
 let timeFrame; 
 let interestR;
 let numberTime;
 
-function toggleAnswer(){
+submitBtn.addEventListener('click', () => {
 
-    if(!investment || !periOfTime || !interestRate || !numberTime1){
+     if(!investment || !periOfTime || !interestRate || !numberTime1){
 
-       if(!investment){
+                 if(!investment){
+          
+                    initialCapitalInput.classList.add('tyError');
+                    errorMsgInitialCapital.classList.add('errorTypeMessage1');
+                      
+               }
+                 if(!periOfTime){
+          
+                    periodOfTimeInput.classList.add('tyError');
+                    errorMsgPeriodOfTime.classList.add('errorTypeMessage2');
+          
+               }
+                 if(!interestRate){
+          
+                    interestRateInput.classList.add('tyError');
+                    errorMsgInterestRate.classList.add('errorTypeMessage3');
+          
+               }
+                 if(!numberTime1){
+          
+                    timeFrameInput.classList.add('tyError');
+                    errorMsgTimeFrame.classList.add('errorTypeMessage4');
+          
+               }
+              } else{
+          
+               initialCapital = Number(initialCapitalInput.value) ;
+               timeFrame = periodOfTimeInput.value;
+               interestR = Number(interestRateInput.value) / 100;
+               numberTime = Number(timeFrameInput.value);
+          
+               loader.classList.toggle('animation');
+               loaderSon1.classList.toggle('animationSon');
+               loaderSon2.classList.toggle('animationSon');
+               loaderSon3.classList.toggle('animationSon');
+               resultSection.classList.toggle('visualize');
+               mainContent.classList.toggle('display');
+          
+               calculatingCI();
+          }
+     
+});
 
-            inputID.classList.add('tyError');
-            input1ErrorTypeMessage.classList.add('errorTypeMessage1');
-            
-       }
-       if(!periOfTime){
-
-            inputperiOfTime.classList.add('tyError');
-            input2ErrorTypeMessage.classList.add('errorTypeMessage2');
-
-       }
-       if(!interestRate){
-
-            inputInterestRate.classList.add('tyError');
-            input3ErrorTypeMessage.classList.add('errorTypeMessage3');
-
-       }
-       if(!numberTime1){
-
-            inputTimeFrame.classList.add('tyError');
-            input4ErrorTypeMessage.classList.add('errorTypeMessage4');
-
-       }
-    } else{
-
-     initialCapital = Number(inputID.value) ;
-     timeFrame = inputperiOfTime.value;
-     interestR = Number(inputInterestRate.value) / 100;
-     numberTime = Number(inputTimeFrame.value);
-
-     loader.classList.toggle('animation');
-     loaderSon1.classList.toggle('animationSon');
-     loaderSon2.classList.toggle('animationSon');
-     loaderSon3.classList.toggle('animationSon');
-     ans.classList.toggle('visualize');
-     main.classList.toggle('display');
-
-          calculatingCI();
-     }
-
-}
+headerIcont.addEventListener('click', removeVisualize);
+anotherBtn.addEventListener('click', removeVisualize);
 
 function removeVisualize() {
 
-    ans.classList.remove('visualize');
-    main.classList.remove('display');
+     resultSection.classList.remove('visualize');
+     mainContent.classList.remove('display');
     location.reload();
 
 }
@@ -136,9 +135,9 @@ function calculatingCI(){
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
-               inputInterestRateLoop = inputInterestRate.value / time;
+               inputInterestRateLoop = interestRateInput.value / time;
                
-               answerP.innerText = `El monto final después de ${numberTime} años con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(initialCapital) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
+               answerParagraph.innerText = `El monto final después de ${numberTime} años con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(initialCapital) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
 
                tabletSonTitle.innerText = 'Años';
 
@@ -152,9 +151,9 @@ function calculatingCI(){
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
-               inputInterestRateLoop = inputInterestRate.value / time;
+               inputInterestRateLoop = interestRateInput.value / time;
                
-               answerP.innerText = `El monto final después de ${numberTime * 2} semestres con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(initialCapital) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
+               answerParagraph.innerText = `El monto final después de ${numberTime * 2} semestres con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(initialCapital) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
                
                tabletSonTitle.innerText = 'Semestres';
           break;
@@ -166,9 +165,9 @@ function calculatingCI(){
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
-               inputInterestRateLoop = inputInterestRate.value / time;
+               inputInterestRateLoop = interestRateInput.value / time;
                
-               answerP.innerText = `El monto final después de ${numberTime * 4} trimestres con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(initialCapital) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
+               answerParagraph.innerText = `El monto final después de ${numberTime * 4} trimestres con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(initialCapital) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
 
                tabletSonTitle.innerText = 'Trimestres';
           break;
@@ -181,9 +180,9 @@ function calculatingCI(){
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
-               inputInterestRateLoop = inputInterestRate.value / time;
+               inputInterestRateLoop = interestRateInput.value / time;
                
-               answerP.innerText = `El monto final después de ${numberTime * 12} meses con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(initialCapital) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
+               answerParagraph.innerText = `El monto final después de ${numberTime * 12} meses con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(initialCapital) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
 
                tabletSonTitle.innerText = 'Meses';
           break;
@@ -195,9 +194,9 @@ function calculatingCI(){
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
-               inputInterestRateLoop = inputInterestRate.value / time;
+               inputInterestRateLoop = interestRateInput.value / time;
                
-               answerP.innerText = `El monto final después de ${numberTime * 52} semanas con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(initialCapital) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
+               answerParagraph.innerText = `El monto final después de ${numberTime * 52} semanas con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(initialCapital) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
 
                tabletSonTitle.innerText = 'Semanas';
           break;
@@ -210,9 +209,9 @@ function calculatingCI(){
                noDecimals = endingBalance.toFixed(2);
                profi = noDecimals - initialCapital;
                noDecimalsProfi = profi.toFixed(2);
-               inputInterestRateLoop = inputInterestRate.value / time;
+               inputInterestRateLoop = interestRateInput.value / time;
                
-               answerP.innerText = `El monto final después de ${numberTime * 365} dias con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(initialCapital) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
+               answerParagraph.innerText = `El monto final después de ${numberTime * 365} dias con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(initialCapital) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
 
                tabletSonTitle.innerText = 'Dias';
           break;
