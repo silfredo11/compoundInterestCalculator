@@ -1,3 +1,5 @@
+import{addThousandsSeparator} from "./function.js"
+
 const submitBtn = document.querySelector('#button');
 const anotherBtn = document.querySelector('#button2');
 const resultSection = document.querySelector('.answer');
@@ -100,20 +102,12 @@ function removeVisualize() {
 
 }
 
-function addThousandsSeparator(number) {
-     let partsNumber = number.toString().split('.');
- 
-     partsNumber[0] = partsNumber[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
- 
-     return partsNumber.join('.');
-}
-
-     let endingBalance;
-     let noDecimals;
-     let profi; 
-     let noDecimalsProfi; 
-     let numberTimeLoop;
-     let inputInterestRateLoop;
+let endingBalance;
+let noDecimals;
+let profi; 
+let noDecimalsProfi; 
+let numberTimeLoop;
+let inputInterestRateLoop;
 
 const compountInteresFormula = (time, periodofTime) => {
      numberTimeLoop = numberTime * time;
@@ -126,9 +120,7 @@ const compountInteresFormula = (time, periodofTime) => {
      answerParagraph.innerText = `El monto final después de ${numberTime} años con una tasa de interés del ${interestR * 100} % anual es de ${addThousandsSeparator(noDecimals) }, de los cuales, ${ addThousandsSeparator(investment) } pertenecen al saldo inicial y ${addThousandsSeparator(noDecimalsProfi) } pertenecen a las ganancias generadas. `;
  
      tabletSonTitle.innerText = periodofTime;
- } 
-
-// Here start the form code
+} 
 
 function calculatingCI(){
 
